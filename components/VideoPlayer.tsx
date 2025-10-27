@@ -2,11 +2,10 @@ import React from 'react';
 import { CloseIcon } from './Icons';
 
 interface VideoPlayerProps {
-  src: string;
   onClose: () => void;
 }
 
-const VideoPlayer: React.FC<VideoPlayerProps> = ({ src, onClose }) => {
+const VideoPlayer: React.FC<VideoPlayerProps> = ({ onClose }) => {
   return (
     <div
       className="fixed inset-0 bg-black/80 backdrop-blur-md z-[100] flex items-center justify-center animate-fade-in"
@@ -27,7 +26,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ src, onClose }) => {
           <CloseIcon className="w-8 h-8" />
         </button>
         <video
-          src={src}
+          src="space.mp4"
           controls
           autoPlay
           className="w-full h-auto max-h-[80vh] rounded-lg shadow-2xl"
